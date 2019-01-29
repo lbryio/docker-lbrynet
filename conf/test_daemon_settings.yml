@@ -1,0 +1,7 @@
+lbryum_servers:
+  - orchstr8:50001
+
+blockchain_name: lbrycrd_testnet
+
+delete_blobs_on_remove: True
+use_upnp: False

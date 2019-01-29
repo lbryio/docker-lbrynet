@@ -24,7 +24,7 @@ services:
 ## Building
 
 ```
-docker build -t sayplastic/lbrynet:0.30rc2
-docker tag sayplastic/lbrynet:0.30rc2 sayplastic/lbrynet:latest
+docker build -t sayplastic/lbrynet:0.30rc6 .
+docker tag sayplastic/lbrynet:0.30rc6 sayplastic/lbrynet:latest
 docker push sayplastic/lbrynet
 ```
