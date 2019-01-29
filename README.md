@@ -39,7 +39,7 @@ VERSION=0.30.5 make publish
 
 ```
 make get_release
-docker build -t sayplastic/lbrynet:0.30rc6 .
-docker tag sayplastic/lbrynet:0.30rc6 sayplastic/lbrynet:latest
+docker build -t sayplastic/lbrynet:0.30.5 .
+docker tag sayplastic/lbrynet:0.30.5 sayplastic/lbrynet:latest
 docker push sayplastic/lbrynet
 ```
