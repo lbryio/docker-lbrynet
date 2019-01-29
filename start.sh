@@ -7,4 +7,8 @@ if [ ! -d "$LBRY_DOWNLOAD_DIRECTORY" ]; then
     mkdir $LBRY_DOWNLOAD_DIRECTORY
 fi
 
-./lbrynet start
+if [ -z ${LBRY_DOCKER_CONFIG+x} ]; then
+    ./lbrynet start --config=/daemon/daemon_settings.yml
+else
+    ./lbrynet start --config=$LBRY_DOCKER_CONFIG
+fi

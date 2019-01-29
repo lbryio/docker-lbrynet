@@ -4,11 +4,11 @@ get_release:
 
 .PHONY: build
 build:
-	docker build -t sayplastic/lbrynet .
+	docker build -t sayplastic/lbrynet:$(VERSION) .
 
 .PHONY: publish
 publish:
-	docker push sayplastic/lbrynet
+	scripts/publish.sh
 
 clean:
 	rm -rf lbrynet lbrynet-linux.zip
