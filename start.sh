@@ -1,5 +1,10 @@
 #!/bin/sh
 
+set -o xtrace
+
+if [ ! -d "$LBRY_DATA_DIR" ]; then
+    mkdir $LBRY_DATA_DIR
+fi
 if [ ! -d "$LBRY_LBRYUM_WALLET_DIR" ]; then
     mkdir $LBRY_LBRYUM_WALLET_DIR
 fi

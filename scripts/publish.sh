@@ -4,10 +4,10 @@ set +x
 set -e
 
 WAIT=5
-BASE_IMAGE_NAME=sayplastic/lbrynet
+BASE_IMAGE_NAME=lbryweb/lbrynet
 
 if [ -z ${VERSION+x} ]; then
-    echo "Please provide sayplastic/lbrynet version as \$VERSION variable."
+    echo "Please provide ${BASE_IMAGE_NAME} version as \$VERSION variable."
     exit 1
 fi
 
@@ -25,4 +25,5 @@ echo "Container launched successfully, stopping it"
 docker kill $ID
 
 echo "Pushing to Docker Hub..."
-docker push sayplastic/lbrynet:$VERSION
+docker push lbryweb/lbrynet:$VERSION
+docker push lbryweb/lbrynet:latest

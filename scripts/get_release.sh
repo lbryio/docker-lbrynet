@@ -8,6 +8,6 @@ URL=$(
 )
 
 echo "Getting the latest release from $URL..."
-curl -sOL $URL
+curl -OL $URL
 unzip lbrynet-linux.zip
 rm lbrynet-linux.zip

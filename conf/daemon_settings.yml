@@ -1,1 +1,2 @@
 use_upnp: False
+delete_blobs_on_remove: True
