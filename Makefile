@@ -1,15 +1,13 @@
 all:
-	make get_release
-	make image
+	make latest_image
 	make publish
 	make clean
 
-get_release:
+latest_image:
 	scripts/get_release.sh
 
-.PHONY: image
-image:
-	docker build -t lbryweb/lbrynet:$(VERSION) -t lbryweb/lbrynet:latest .
+latest_rc_image:
+	scripts/get_release.sh rc
 
 .PHONY: publish
 publish:

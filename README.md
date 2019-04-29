@@ -9,7 +9,7 @@ version: '3.2'
 
 services:
   daemon_test_local:
-    image: sayplastic/lbrynet:latest
+    image: lbryweb/lbrynet:latest
     ports:
       - "5279:5279"
     volumes:
@@ -25,21 +25,24 @@ services:
 
 ## Updating, building and publishing
 
+You need to have docker toolset installed on your system, as well as the ability to execute Makefiles and bash scripts.
+
 #### Using the provided Makefile
 
 This is the preferred method because it also checks if our newly built container can actually run.
 
 ```
-make get_release
-VERSION=0.30.5 make build
-VERSION=0.30.5 make publish
+make latest_image
+# or
+make latest_rc_image
+make publish VERSION=0.36.0
 ```
 
 #### Manually
 
 ```
 make get_release
-docker build -t sayplastic/lbrynet:0.30.5 .
-docker tag sayplastic/lbrynet:0.30.5 sayplastic/lbrynet:latest
-docker push sayplastic/lbrynet
+docker build -t lbryweb/lbrynet:0.36.0 .
+docker tag lbryweb/lbrynet:0.36.0 lbryweb/lbrynet:latest
+docker push lbryweb/lbrynet
 ```

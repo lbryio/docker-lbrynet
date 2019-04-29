@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set +x
+set -x
 set -e
 
 WAIT=5
@@ -25,5 +25,5 @@ echo "Container launched successfully, stopping it"
 docker kill $ID
 
 echo "Pushing to Docker Hub..."
-docker push lbryweb/lbrynet:$VERSION
+docker push lbryweb/lbrynet:${VERSION}
 docker push lbryweb/lbrynet:latest

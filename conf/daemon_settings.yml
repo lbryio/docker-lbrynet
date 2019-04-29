@@ -1,3 +1,5 @@
+lbryum_servers:
+  - victor.lbry.tech:50001
 use_upnp: False
 delete_blobs_on_remove: True
 share_usage_data: false
