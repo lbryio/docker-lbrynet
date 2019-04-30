@@ -1,5 +1,5 @@
 lbryum_servers:
-  - victor.lbry.tech:50001
+  - lbryumx3.lbry.com:50001
 use_upnp: False
 delete_blobs_on_remove: True
 share_usage_data: false
@@ -8,5 +8,5 @@ components_to_skip:
   - blob_server
   - dht
 
-streaming_only: true
+save_files: false
 save_blobs: false
