@@ -8,5 +8,7 @@ components_to_skip:
   - blob_server
   - dht
 
+streaming_only: true
+streaming_server: 0.0.0.0:5280
 save_files: false
 save_blobs: false

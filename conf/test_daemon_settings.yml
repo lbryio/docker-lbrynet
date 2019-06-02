@@ -5,3 +5,12 @@ blockchain_name: lbrycrd_testnet
 
 delete_blobs_on_remove: True
 use_upnp: False
+share_usage_data: false
+components_to_skip:
+  - hash_announcer
+  - blob_server
+  - dht
+
+streaming_server: 0.0.0.0:5280
+save_files: false
+save_blobs: false
