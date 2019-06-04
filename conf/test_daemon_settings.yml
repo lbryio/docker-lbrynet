@@ -1,16 +1,20 @@
+api: 0.0.0.0:5279
+streaming_server: 0.0.0.0:5280
+
+components_to_skip:
+- hash_announcer
+- blob_server
+- dht
+
+data_dir: /storage/lbrynet
+download_dir: /storage/download
+wallet_dir: /storage/lbryum
+
 lbryum_servers:
   - orchstr8:50001
 
-blockchain_name: lbrycrd_testnet
-
-delete_blobs_on_remove: True
-use_upnp: False
-share_usage_data: false
-components_to_skip:
-  - hash_announcer
-  - blob_server
-  - dht
-
-streaming_server: 0.0.0.0:5280
-save_files: false
 save_blobs: false
+save_files: false
+share_usage_data: true
+use_upnp: false
+blockchain_name: lbrycrd_testnet
