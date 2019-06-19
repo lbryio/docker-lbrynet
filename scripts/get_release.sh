@@ -2,8 +2,10 @@
 
 if [[ ${1} == "rc" ]]; then
     API_URL="https://api.github.com/repos/lbryio/lbry/releases"
+    RC_SUFFIX="-rc"
 else
     API_URL="https://api.github.com/repos/lbryio/lbry/releases/latest"
+    RC_SUFFIX="rc"
 fi
 
 URL=$(
@@ -21,4 +23,4 @@ curl -OL $URL
 unzip lbrynet-linux.zip
 rm lbrynet-linux.zip
 
-docker build -t lbryweb/lbrynet:$VERSION -t lbryweb/lbrynet:latest .
+docker build -t lbryweb/lbrynet:$VERSION -t lbryweb/lbrynet:latest$RC_SUFFIX .
