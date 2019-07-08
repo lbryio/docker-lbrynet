@@ -3,6 +3,8 @@
 set -o xtrace
 set -e
 
+SDK_ARGS=""
+
 function parse_yaml {
    local prefix=$2
    local s='[[:space:]]*' w='[a-zA-Z0-9_]*' fs=$(echo @|tr @ '\034')
@@ -20,11 +22,10 @@ function parse_yaml {
    }'
 }
 
-if [ -z ${LBRY_DOCKER_CONFIG+x} ]; then
+if [ -z ${SDK_CONFIG+x} ]; then
     CONFIG="/daemon/daemon_settings.yml"
-    
 else
-    CONFIG=$LBRY_DOCKER_CONFIG
+    CONFIG=$SDK_CONFIG
 fi
 
 cat $CONFIG
@@ -41,4 +42,8 @@ if [ ! -d "$LBRY_download_dir" ]; then
     mkdir $LBRY_download_dir
 fi
 
-./lbrynet start --config=$CONFIG
+if [ ! -z ${SDK_LBRYUM_SERVERS+x} ]; then
+    SDK_ARGS="${SDK_ARGS} --lbryum-servers=${SDK_LBRYUM_SERVERS}"
+fi
+
+./lbrynet start --config=$CONFIG $SDK_ARGS

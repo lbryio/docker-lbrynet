@@ -9,6 +9,6 @@ COPY lbrynet ./
 COPY conf/daemon_settings.yml ./
 COPY conf/test_daemon_settings.yml ./
 
-COPY start.sh ./start.sh
-RUN chmod a+x start.sh
-CMD ["./start.sh"]
+COPY launcher.sh ./launcher.sh
+RUN chmod a+x launcher.sh
+CMD ["./launcher.sh"]

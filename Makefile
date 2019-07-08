@@ -1,4 +1,5 @@
 all:
+	make clean
 	make latest_image
 	make publish
 	make clean

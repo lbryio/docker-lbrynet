@@ -1,15 +1,19 @@
 #!/bin/bash
 
+set -e
+
 if [[ ${1} == "rc" ]]; then
     API_URL="https://api.github.com/repos/lbryio/lbry/releases"
     RC_SUFFIX="-rc"
 else
     API_URL="https://api.github.com/repos/lbryio/lbry/releases/latest"
-    RC_SUFFIX="rc"
+    RC_SUFFIX=""
 fi
 
+echo ${API_URL}
+
 URL=$(
-    curl -si ${API_URL}|
+    curl -siL ${API_URL}|
     grep browser_download_url|
     grep linux|
     head -n 1|
