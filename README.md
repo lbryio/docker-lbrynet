@@ -9,7 +9,7 @@ version: '3.2'
 
 services:
   daemon_test_local:
-    image: lbryweb/lbrynet:latest
+    image: lbry/lbrynet-tv:latest
     ports:
       - "5279:5279"
     volumes:
@@ -42,7 +42,7 @@ make publish VERSION=0.36.0
 
 ```
 make get_release
-docker build -t lbryweb/lbrynet:0.36.0 .
-docker tag lbryweb/lbrynet:0.36.0 lbryweb/lbrynet:latest
-docker push lbryweb/lbrynet
+docker build -t lbry/lbrynet-tv:0.36.0 .
+docker tag lbry/lbrynet-tv:0.36.0 lbry/lbrynet-tv:latest
+docker push lbry/lbrynet-tv
 ```
