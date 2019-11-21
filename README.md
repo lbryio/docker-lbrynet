@@ -25,7 +25,7 @@ services:
 
 ## Updating, building and publishing
 
-You need to have docker toolset installed on your system, as well as the ability to execute Makefiles and bash scripts.
+You need to have the docker toolset installed on your system, as well as the ability to execute Makefiles and bash scripts.
 
 #### Using the provided Makefile
 
