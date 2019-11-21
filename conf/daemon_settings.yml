@@ -11,9 +11,6 @@ data_dir: /storage/lbrynet
 download_dir: /storage/download
 wallet_dir: /storage/lbryum
 
-lbryum_servers:
-- spv2.lbry.com:50001
-
 save_blobs: false
 save_files: false
 share_usage_data: false
