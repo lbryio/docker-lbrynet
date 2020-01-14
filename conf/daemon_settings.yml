@@ -15,3 +15,7 @@ save_blobs: false
 save_files: false
 share_usage_data: false
 use_upnp: false
+
+lbryum_servers:
+- spv25.lbry.com:50001
+- spv26.lbry.com:50001
