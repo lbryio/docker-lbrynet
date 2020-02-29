@@ -7,12 +7,15 @@ BASE_IMAGE_NAME=lbry/lbrynet-tv
 if [[ ${1} == "rc" ]]; then
     API_URL="https://api.github.com/repos/lbryio/lbry/releases"
     RC_SUFFIX="-rc"
+elif [ ${1} != ""  ]; then
+    API_URL="https://api.github.com/repos/lbryio/lbry/releases/tags/${1}"
+    RC_SUFFIX=""
 else
     API_URL="https://api.github.com/repos/lbryio/lbry/releases/latest"
     RC_SUFFIX=""
 fi
 
-echo ${API_URL}
+echo "URL: ${API_URL}"
 
 URL=$(
     curl -siL ${API_URL}|

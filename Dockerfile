@@ -8,6 +8,7 @@ WORKDIR /daemon
 COPY lbrynet ./
 COPY conf/daemon_settings.yml ./
 COPY conf/test_daemon_settings.yml ./
+COPY conf/regtest_daemon_settings.yml ./
 
 COPY launcher.sh ./launcher.sh
 RUN chmod a+x launcher.sh
