@@ -11,5 +11,6 @@ COPY conf/test_daemon_settings.yml ./
 COPY conf/regtest_daemon_settings.yml ./
 
 COPY launcher.sh ./launcher.sh
-RUN chmod a+x launcher.sh
+COPY scripts/probe.sh ./probe.sh
+RUN chmod +x ./*.sh
 CMD ["./launcher.sh"]
