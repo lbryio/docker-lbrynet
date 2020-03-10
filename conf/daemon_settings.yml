@@ -17,5 +17,7 @@ share_usage_data: false
 use_upnp: false
 save_resolved_claims: false
 
+reflect_streams: false
+
 lbryum_servers:
 - spv26.lbry.com:50001
