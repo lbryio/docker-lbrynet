@@ -1,18 +1,9 @@
-all:
-	make clean
-	make latest_image
-	make publish
-	make clean
+image:
+	scripts/build.sh ${VERSION}
 
-latest_image:
-	scripts/get_release.sh
-
-latest_rc_image:
-	scripts/get_release.sh rc
-
-.PHONY: publish
-publish:
-	scripts/publish.sh
+.PHONY: push
+push:
+	scripts/push.sh ${VERSION}
 
 clean:
 	rm -rf lbrynet lbrynet-linux.zip

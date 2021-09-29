@@ -46,4 +46,5 @@ if [ ! -z ${SDK_LBRYUM_SERVERS+x} ]; then
     SDK_ARGS="${SDK_ARGS} --lbryum-servers=${SDK_LBRYUM_SERVERS}"
 fi
 
+rm -rf /storage/lbrynet/lbrynet.sqlite*
 ./lbrynet start --config=$CONFIG $SDK_ARGS

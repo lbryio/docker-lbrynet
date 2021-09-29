@@ -32,17 +32,15 @@ You need to have the docker toolset installed on your system, as well as the abi
 This is the preferred method because it also checks if our newly built container can actually run.
 
 ```
-make latest_image
-# or
-make latest_rc_image
-make publish VERSION=0.36.0
+export VERSION=0.101.1
+make image
+make publish
 ```
 
 #### Manually
 
 ```
-make get_release
-docker build -t lbry/lbrynet-tv:0.36.0 .
-docker tag lbry/lbrynet-tv:0.36.0 lbry/lbrynet-tv:latest
-docker push lbry/lbrynet-tv
+make image
+docker build -t lbry/lbrynet-tv:0.101.1
+docker push lbry/lbrynet-tv:0.101.1
 ```
