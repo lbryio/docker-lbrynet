@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:latest
 EXPOSE 5279 5280
 
 VOLUME /storage
@@ -12,5 +12,5 @@ COPY conf/regtest_daemon_settings.yml ./
 
 COPY launcher.sh ./launcher.sh
 COPY scripts/probe.sh ./probe.sh
-RUN chmod +x ./*.sh
+RUN chmod +x lbrynet ./*.sh
 CMD ["./launcher.sh"]

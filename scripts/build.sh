@@ -18,7 +18,7 @@ curl -OL $RELEASE_URL
 unzip lbrynet-linux.zip
 rm lbrynet-linux.zip
 
-docker build -t ${BASE_IMAGE_NAME}:${VERSION} .
+docker build -t ${BASE_IMAGE_NAME}:${VERSION} --platform linux/amd64 .
 
 echo "Launching container for ${BASE_IMAGE_NAME}:${VERSION} and giving it ${WAIT}s to launch..."
 
